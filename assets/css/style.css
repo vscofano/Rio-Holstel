@@ -26,7 +26,7 @@
 body {
 background: #ffffff none repeat scroll 0 0;
 color: #000000;
-font-family: 'Poppins', sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 font-size: 14px;
 font-weight: 400;
 line-height: 24px;
@@ -43,12 +43,17 @@ h5,
 h6 {
   letter-spacing: 0px;
   margin-top: 0px; 
-  font-family: 'Jost', sans-serif;
   color: #1b2032;
   font-weight: 400;
 }
+h4.titulo_privativo{
+    color: #04620b;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-left: -15px;
+}
 a {
-font-family: 'Jost', sans-serif;
 text-decoration: none;
 transition: all 0.2s ease 0s;
 }
@@ -62,6 +67,13 @@ a:focus {
 }
 p {
     margin-bottom: 0;
+    font-size: 24px;
+    line-height: 30px;
+}
+p.box_page_2{
+    font-size: 15px;
+    line-height: 18px;
+    text-align: justify;
 }
 ul,
 li {
@@ -102,7 +114,10 @@ fieldset {
     animation: spinner 700ms infinite linear;
     z-index: 10000;
 }
-
+#titulo{
+    -webkit-text-stroke: 1px rgb(52, 119, 194);
+    
+}
 @-webkit-keyframes spinner {
     0% {
         -webkit-transform: rotate(0deg);
@@ -170,6 +185,7 @@ width: 90%;
 margin: auto;	
 }
 }
+
 /*END SECTION TITLE DESIGN*/
 /*START SCROLL TO TOP*/
 .topcontrol {
@@ -217,6 +233,11 @@ display:block!important;
 	-webkit-transition: all 0.5s ease 0s;
 	transition: all 0.5s ease 0s;
 }
+.our_pages {
+	background-color:#04620b;
+	-webkit-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
 .navbar-fixed {
     z-index: 999;
     position: fixed;
@@ -229,7 +250,7 @@ display:block!important;
     animation: fadeInDown 800ms;
     -webkit-backface-visibility: hidden;
     border-radius: 0px;
-    background: rgb(47, 42, 42);
+    background: rgb(5, 90, 5);
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.07);
 }
 
@@ -262,6 +283,7 @@ float:right;
 	text-transform: capitalize;
 	-webkit-transition: .3s;
 	transition: .3s;
+    text-transform: uppercase;
 }
 #navigation.navbar-fixed #main-menu ul li a{
 	color: #fff;
@@ -270,7 +292,7 @@ float:right;
 #navigation.navbar-fixed #main-menu ul li a:focus,
 #main-menu ul li a:hover,
 #main-menu ul li a:focus{
-	color:darkgreen;
+	color:yellow;
 }
 
 .slicknav_nav_icon{
@@ -284,7 +306,6 @@ float:right;
 	display: block;
 	content: "\e68e";
 	position: absolute;
-	font-family: 'themify';
 	color: #fff;
 	font-size: 20px;
 }
@@ -446,19 +467,13 @@ margin-bottom: 25px;
 @media only screen and (max-width:480px) { 
 .hero-text p {width: 100%;}
 }
-.btn-home-bg{
-background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-border: 3px solid #fff;
-border-radius: 500px;
-color: #fff;
-font-size: 14px;
-padding: 12px 40px;
-text-transform: uppercase;
-position:relative;
-font-weight: 500;
-transition: all 0.3s ease 0s;
-animation: pulsante 1.5s alternate infinite;
+
+#seta{
+   width: 15%;
+   margin-top: 100px;
 }
+
+
 @keyframes pulsante {
     0%{
         transform: scale(1)
@@ -476,11 +491,7 @@ animation: pulsante 1.5s alternate infinite;
         transform: scale(1);
     }
 }
-.btn-home-bg:hover, .btn-home-bg:focus{
-background:darkgreen;
-border: 3px solid yellow;	
-color: blue;
-}
+
 .home_video{height: 750px;position:relative;}
 .home_video:before {
   position: absolute;
@@ -521,9 +532,23 @@ video { min-width: 100%;height: 100%;}
 * 04.START ABOUT DESIGN
 * ----------------------------------------------------------------------------------------
 */
+/*buttao das divs*/
+.next_page{
+    border-radius: 25px;
+    border-style: solid;
+    background-color: transparent;
+    border-color: white;
+    padding: 17px;
+    color: white;
+    width: 200px;
+    transition: all 0.4s;
+}
+.next_page:hover{
+    transform: scale(1.1);
+}
+/*end buttao das divs*/
 
 .single_about_img{text-align: center;}
-.single_about_img img{}
 .single_about {
   padding-top: 125px;
 }
@@ -547,9 +572,10 @@ width: 100px;
 	/* margin-top: 10px; */
 	position: relative;
 	background: #fff;
-	box-shadow: 0 10px 40px -10px rgba(0,64,128,.2);
 	padding: 40px;
-	border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    
     
 }
 @media only screen and (max-width:768px){
@@ -567,9 +593,7 @@ width: 100px;
     left: 0;
     transition: all 0.5s ease 0s;
 }
-.serviceBox:hover:after{
-    border-color: darkgreen;
-}
+
 .serviceBox .service-icon{
 color: #1b2032;
 font-size: 60px;
@@ -728,7 +752,7 @@ width: 35px;
     margin-top: 50px;
     text-align: center;
 }
-.owl-theme .owl-controls .owl-page { display: inline-block }
+.owl-theme .owl-controls .owl-page { display: none }
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div { cursor: pointer }
 .owl-theme .owl-controls .owl-page span {
@@ -876,14 +900,14 @@ margin-right: 10px;
 * 08.START RECENT PROJECT DESIGN
 * ----------------------------------------------------------------------------------------
 */
-.our_work{background:#f9f9f9;}
+.our_work{background:#00000000;}
 .single_gallery{
-margin: 0 10px;
+margin: 0 25px;
 position:relative;
 }
 .img-gallery{width: 100%;}
 .gallery_info{
-bottom: 0;
+bottom: 85px;
 left: 0;
 margin: auto;
 padding: 20px 0;
@@ -904,7 +928,7 @@ text-align: center;
 .gallery_info h1{
 text-transform: uppercase;
 font-weight: 700;
-font-size: 30px;
+font-size: 50px;
 margin-bottom:0px;	
 color:#fff;
 }
@@ -954,16 +978,22 @@ color:#fff;
 /*End project modal*/
 /*START PORTFOLIO SINGLE PAGE DESIGN*/
 .single_project{
-background:#f7f7f7;
+background:rgb(255, 255, 255);
 padding-top:80px;
 padding-bottom:50px;
+line-height: 17.5px;
+}
+.single_project h1{
+    color: green;
+    text-align: center;
+    margin-top: 15px;
+    
 }
 .project_dec {
-	background: #fff none repeat scroll 0 0;
+	background: #dfd5d580 none repeat scroll 0 0;
 	box-shadow: 0 10px 40px -10px rgba(0,64,128,.08);
 	margin-bottom: 30px;
 	padding: 40px;
-	border-radius: 10px;
 }
 .project_dec img {margin-right: 20px;
 width: 600px;}
@@ -1371,7 +1401,6 @@ border: 1px solid rgba(255, 255, 255, 0.1);
 border-radius:0px !important;
 box-shadow: none;
 color: #1b2032;
-font-family: montserrat,sans-serif;
 font-size: 14px;
 height: 50px !important;
 }
@@ -1509,25 +1538,7 @@ text-transform: uppercase;
 @media only screen and (max-width:360px) { 
     .buy_now_title { font-size: 15px }
 }
-.btn-promotion-bg {
-background: darkgreen none repeat scroll 0 0;
-border: 1px solid darkgreen;
-border-radius: 2px;
-box-shadow: 0 11px 11px 0 rgba(0, 0, 0, 0.06);
-color: #fff;
-font-size: 14px;
-font-weight: 600;
-letter-spacing: 0.5px;
-padding: 12px 40px;
-text-transform: uppercase;
-transition: all 0.2s ease 0s;
-}
-.btn-promotion-bg:hover,
-.btn-promotion-bg:focus {
-    background: #fff;
-    border: 1px solid #fff;
-    color: #1b2032;
-}
+
 /*
 * ----------------------------------------------------------------------------------------
 * 14.END PROMOTION DESIGN
@@ -1546,7 +1557,6 @@ background-attachment: fixed;
 	background-position: top center;
 }
 .contact-address:before {
-background: rgba(0, 0, 0, 0.4);
 content: "";
 height: 100%;
 left: 0;
@@ -1555,12 +1565,12 @@ top: 0;
 width: 100%;
 }
 .address{
-background: rgba(255, 255, 0, 0.603) none repeat scroll 0 0;
-padding: 60px 30px;	
+background: #21632ba2 none repeat scroll 0 0;
+padding: 60px 30px;
 }
 .address h2{
 color: #f2f2f2;
-font-size: 30px;
+font-size: 15px;
 position:relative;
 }
 @media only screen and (max-width:480px) { 
