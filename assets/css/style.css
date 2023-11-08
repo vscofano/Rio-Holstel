@@ -29,9 +29,10 @@ color: #000000;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 14px;
 font-weight: 400;
-line-height: 24px;
+line-height: 28px;
 overflow-x: hidden;
 margin: auto;
+letter-spacing: 1.2px;
 }
 html,
 body { height: 100%;position:relative;  }
@@ -67,8 +68,8 @@ a:focus {
 }
 p {
     margin-bottom: 0;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 25px;
 }
 p.box_page_2{
     font-size: 15px;
@@ -139,6 +140,25 @@ fieldset {
         transform: rotate(360deg);
     }
 }
+
+/*seta header*/
+#seta_arrow{
+    font-size: 120px;
+    animation: arrowMove 2.5s infinite;
+}
+@keyframes arrowMove {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+/*seta header*/
+
 .status-mes h4 {
 color: #f7f7f7;
 position:relative;
@@ -447,7 +467,7 @@ color: #fff !important;
 .hero-text h1{	
 color: #fff;
 font-size: 70px;
-font-weight: 900;
+font-weight: 600;
 position:relative;
 text-transform: uppercase;
 }
@@ -534,17 +554,19 @@ video { min-width: 100%;height: 100%;}
 */
 /*buttao das divs*/
 .next_page{
-    border-radius: 25px;
+    border-radius: 30px;
     border-style: solid;
+    border-width: 0.5px;
+    font-weight: 600;
     background-color: transparent;
-    border-color: white;
-    padding: 17px;
+    border-color: rgba(255, 255, 255, 0.356);
+    padding: 8px 40px;
     color: white;
-    width: 200px;
     transition: all 0.4s;
 }
 .next_page:hover{
-    transform: scale(1.1);
+    background-color: #04620b;
+   border-color: #04620b;
 }
 /*end buttao das divs*/
 
@@ -574,7 +596,8 @@ width: 100px;
 	background: #fff;
 	padding: 40px;
     border-style: solid;
-    border-width: 1px;
+    border-width: 0.25px;
+    height: 320px;
     
     
 }
@@ -1564,14 +1587,41 @@ position: absolute;
 top: 0;
 width: 100%;
 }
-.address{
-background: #21632ba2 none repeat scroll 0 0;
-padding: 60px 30px;
+#endereco :hover{
+    background-color: grey;
 }
+.address{
+background: #21632beb none repeat scroll 0 0;
+padding: 20px;
+position: relative;
+top: 200px;
+}
+#rodape_i:hover{
+    cursor: pointer;
+
+}
+
+.endereco{
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 0.5px;
+    font-weight: 600;
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.356);
+    padding: 8px 40px;
+    color: white;
+    transition: all 0.4s;
+}
+.endereco:hover{
+    background-color: #373737;
+   border-color: #373737;
+}
+
 .address h2{
 color: #f2f2f2;
 font-size: 15px;
 position:relative;
+margin-bottom: 20px;
 }
 @media only screen and (max-width:480px) { 
 .address h2{font-size: 20px;}
@@ -1591,8 +1641,8 @@ font-size: 30px;
 position:relative;
 line-height: 58px;
 }
-.address a :hover{
-    color: blue;
+#endereco :hover{
+   background-color: grey;
 }
 @media only screen and (max-width:480px) { 
 .address h3{
