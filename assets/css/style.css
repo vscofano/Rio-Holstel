@@ -96,6 +96,12 @@ fieldset {
     top: 0;
     z-index: 99999;
 }
+@media only screen and (max-width:480px){
+    .site-logo{
+        width: 30%;
+    }
+}
+
 
 .status-mes {
     width: 45px;
@@ -145,6 +151,8 @@ fieldset {
 #seta_arrow{
     font-size: 120px;
     animation: arrowMove 2.5s infinite;
+    position: relative;
+    top: 70px;
 }
 @keyframes arrowMove {
     0% {
@@ -191,6 +199,9 @@ p.section-title-white{color:#fff;}
 @media only screen and (max-width:480px) { 
 .section-title  h1  {font-size:30px;}
 }
+#logo_menu{
+    width: 55%;
+}
 
 .section-title-white{color:#fff;position:relative;}
 .section-title  p{
@@ -224,6 +235,7 @@ right: 5px;
 text-align: center;
 transition: all 0.2s ease 0s;
 width: 50px;
+margin-right: 25px;
 }
 .topcontrol:hover {
     background: #232a34;
@@ -390,10 +402,10 @@ color: #fff !important;
 	font-weight: 600;
 }	
 }
-
+/*Menu mobile*/
 @media only screen and (max-width:768px) {
 .bg-faded {background-color:#00000000;}
-.navbar-fixed {background: #000000;}
+.navbar-fixed {background: rgb(5, 90, 5);}
 .navbar-brand { padding-top: 20px;}
 .slicknav_menu {
 	font-size: 15px;
@@ -417,8 +429,8 @@ color: #fff !important;
 * 03.START HOME DESIGN
 * ----------------------------------------------------------------------------------------
 */
-#back-mobile{
-    display: none;
+#aqui{
+    padding: 50px;
 }
 @media only screen and (min-width:350px) and (max-width:500px){
     #back-mobile{
@@ -436,10 +448,9 @@ color: #fff !important;
         box-shadow: 5px 5px 10px rgba(243, 247, 19, 0.83);
         
     }
-    #home{
-        display: none
+    #home p{
+        font-size: 17px;
     }
-
 }
 
 @media only screen and (max-width:480px) { 
@@ -1021,6 +1032,15 @@ line-height: 17.5px;
 .project_dec img {margin-right: 20px;
 width: 600px;}
 @media only screen and (max-width:768px) { 
+.gallery_info{
+    position: absolute;
+    top: 20px;
+}
+
+.gallery_info h1{
+    font-size: 35px;
+    
+}
 .project_dec img {width: 100%;}
 }
 .about_project h4 {
@@ -1586,15 +1606,15 @@ left: 0;
 position: absolute;
 top: 0;
 width: 100%;
+
 }
 #endereco :hover{
     background-color: grey;
 }
 .address{
 background: #21632beb none repeat scroll 0 0;
-padding: 20px;
-position: relative;
-top: 200px;
+padding: 50px;
+
 }
 #rodape_i:hover{
     cursor: pointer;
@@ -1716,6 +1736,16 @@ color: #1b2032;}
     box-shadow: 0 0 0 0px #ce4c2c;
     border: 1px solid #ce4c2c;
 }
+#footer_p{
+    font-size: 15px;
+    padding-top: 25px;
+}
+@media only screen and (max-width:768px){
+ #footer_p{
+    padding: 15px;
+ }
+}
+
 /*END FOOTER SOCIAL DESIGN*/ 
 /*
 * ----------------------------------------------------------------------------------------
