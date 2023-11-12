@@ -417,7 +417,7 @@ color: #fff !important;
 }
 
 @media only screen and (max-width:480px) {
-.slicknav_menu {margin-top: -50px;}
+.slicknav_menu {margin-top: -35px;}
 }
 /*
 * ----------------------------------------------------------------------------------------
@@ -1742,7 +1742,7 @@ color: #1b2032;}
 }
 @media only screen and (max-width:768px){
  #footer_p{
-    padding: 15px;
+    padding: 10px;
  }
 }
 
