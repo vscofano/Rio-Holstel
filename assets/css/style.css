@@ -86,6 +86,7 @@ fieldset {
     margin: 0 auto;
     padding: 0;
 }
+
 /*START PRELOADER DESIGN*/
 .preloader {
     background: #fff;
@@ -99,6 +100,9 @@ fieldset {
 @media only screen and (max-width:480px){
     .site-logo{
         width: 30%;
+    }
+    .quebra_linha{
+        display: block;
     }
 }
 
@@ -201,6 +205,8 @@ p.section-title-white{color:#fff;}
 }
 #logo_menu{
     width: 55%;
+    position: relative;
+    top: 11px;
 }
 
 .section-title-white{color:#fff;position:relative;}
@@ -296,6 +302,7 @@ display:block!important;
 float:right;
 }
 @media only screen and (max-width:767px) { 
+
 .header_right {float:none;}
 }
 #main-menu{
@@ -331,15 +338,16 @@ float:right;
 	color: #fff;
 	font-size: 24px;
 }
-.slicknav_menu .slicknav_icon:before {
+.slicknav_menu .slicknav_icon:before/*hamburguinho*/ {
 	background: transparent;
 	width: 1.125em;
 	height: 0.875em;
 	display: block;
 	content: "\e68e";
 	position: absolute;
+    right: 10px;
 	color: #fff;
-	font-size: 20px;
+	font-size: 28px;
 }
 #mobile_menu{display: none;}
 @media only screen and (max-width:767px) { 
@@ -395,16 +403,23 @@ display: none;
 display: block;
 width: 100%;
 }
+.slicknav_nav ul{
+    position: relative;
+    top: 20px;
+    margin-bottom: 7px;
+}
+
 .slicknav_nav ul li a{
 color: #fff !important;
 	font-size: 16px;
 	text-transform: capitalize;
 	font-weight: 600;
+    
 }	
 }
 /*Menu mobile*/
 @media only screen and (max-width:768px) {
-.bg-faded {background-color:#00000000;}
+.bg-faded {background-color:rgb(5, 90, 5);}
 .navbar-fixed {background: rgb(5, 90, 5);}
 .navbar-brand { padding-top: 20px;}
 .slicknav_menu {
@@ -1743,6 +1758,9 @@ color: #1b2032;}
 @media only screen and (max-width:768px){
  #footer_p{
     padding: 10px;
+    font-size: 12px;
+    text-align: left;
+   
  }
 }
 
