@@ -23,6 +23,10 @@
 * 01.GENERAL STYLE
 * ----------------------------------------------------------------------------------------
 */
+#about_mobile_new{
+    display: none;
+}
+
 body {
 background: #ffffff none repeat scroll 0 0;
 color: #000000;
@@ -52,7 +56,6 @@ h4.titulo_privativo{
     text-transform: uppercase;
     font-weight: bolder;
     font-size: 40px;
-    margin-left: -15px;
 }
 a {
 text-decoration: none;
@@ -74,7 +77,10 @@ p {
 p.box_page_2{
     font-size: 15px;
     line-height: 18px;
-    text-align: justify;
+    text-align: left;
+    width: 96%;
+    margin-top: 8PX;
+    
 }
 ul,
 li {
@@ -105,7 +111,6 @@ fieldset {
         display: block;
     }
 }
-
 
 .status-mes {
     width: 45px;
@@ -181,7 +186,7 @@ letter-spacing: 1px;
 }
 .no-padding { padding: 0 }
 /*END PRELOADER DESIGN*/
-.section-padding {padding: 60px 0;}
+.section-padding {padding: 45px 0;}
 /*START SECTION TITLE DESIGN*/
 .section-title{margin-bottom:60px;}
 .section-title  h1 {
@@ -206,7 +211,7 @@ p.section-title-white{color:#fff;}
 #logo_menu{
     width: 55%;
     position: relative;
-    top: 11px;
+    top: 4px;
 }
 
 .section-title-white{color:#fff;position:relative;}
@@ -220,6 +225,9 @@ margin: auto;
 padding: 0 10px;
 width: 90%;
 margin: auto;	
+}
+.section-padding{
+    padding-top: 70px;
 }
 }
 
@@ -242,6 +250,7 @@ text-align: center;
 transition: all 0.2s ease 0s;
 width: 50px;
 margin-right: 25px;
+margin-bottom: 7.5px;
 }
 .topcontrol:hover {
     background: #232a34;
@@ -406,7 +415,8 @@ width: 100%;
 .slicknav_nav ul{
     position: relative;
     top: 20px;
-    margin-bottom: 7px;
+    margin-bottom: 12px;
+    margin-top: 10px;
 }
 
 .slicknav_nav ul li a{
@@ -423,7 +433,7 @@ color: #fff !important;
 .navbar-fixed {background: rgb(5, 90, 5);}
 .navbar-brand { padding-top: 20px;}
 .slicknav_menu {
-	font-size: 15px;
+	font-size: 7px;
 	box-sizing: border-box;
 	background: transparent;
 	padding: 0;
@@ -432,8 +442,12 @@ color: #fff !important;
 }
 
 @media only screen and (max-width:480px) {
-.slicknav_menu {margin-top: -35px;}
+.slicknav_menu {
+    margin-top: -35px;
+    margin-right: -6px;
 }
+}
+
 /*
 * ----------------------------------------------------------------------------------------
 * 02.END BOOTSTRAP NAVIGATION OVERRIDES
@@ -931,7 +945,7 @@ top: 0;
 transition: all 0.3s ease 0s;
 width: 80px;
 }
-.single_service p{margin-bottom: 20px;}
+.single_service p{lmargin-bottom: 20px;}
 .single_service ul{list-style: outside none none;}
 .single_service ul li i{
 	color: #1b2032;
@@ -1041,22 +1055,73 @@ line-height: 17.5px;
 .project_dec {
 	background: #dfd5d580 none repeat scroll 0 0;
 	box-shadow: 0 10px 40px -10px rgba(0,64,128,.08);
-	margin-bottom: 30px;
-	padding: 40px;
+	margin-bottom: 60px;
+	padding-top: 60PX;
+    padding-bottom: 60PX;
 }
 .project_dec img {margin-right: 20px;
 width: 600px;}
-@media only screen and (max-width:768px) { 
-.gallery_info{
+
+.media-left{
+    margin-left: 35px;
+    margin-right: 25px;
+}
+@media only screen and (max-width:768px) {
+.single_project{
+        padding-top: 53px;
+}
+
+.media-left{
+    margin-bottom: 40px;
+    margin-left: 25px;
+}
+.about_project{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about_project_details li{
+    margin-left: 23px;
+}
+
+.box_page_2{
+    margin-left: 22px;
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-bottom: -17px;
+}
+    .gallery_info{
     position: absolute;
     top: 20px;
 }
 
 .gallery_info h1{
-    font-size: 35px;
+    font-size: 35px;   
+}
+#about_1{
+    display: none;
+}
+#about_mobile_new{
+    display: block;
     
 }
+.subida{
+    margin-top: 11px;
+}
+
 .project_dec img {width: 100%;}
+
+/*tarfidas mobile*/
+table{
+    width: 90%;
+}
+
+.tarifas_cabeca{
+    margin-top: -30px;
+    margin-bottom: -3px;
+}
+.tarifas_p{
+    padding: 5px;
+}
 }
 .about_project h4 {
 	border-bottom: 1px solid #eee;
@@ -1608,6 +1673,10 @@ text-transform: uppercase;
 * 15.START CONTACT ADDRESS DESIGN
 * ----------------------------------------------------------------------------------------
 */
+.porra{
+    position: relative ;
+    top: 50px;
+}
 .contact-address{
 position:relative;
 background-attachment: fixed;
@@ -1658,7 +1727,8 @@ font-size: 15px;
 position:relative;
 margin-bottom: 20px;
 }
-@media only screen and (max-width:480px) { 
+@media only screen and (max-width:480px) {
+    
 .address h2{font-size: 20px;}
 }
 .address h1{
@@ -1668,6 +1738,7 @@ position:relative;
 font-weight: 800;
 }
 @media only screen and (max-width:480px) { 
+
 .address h1{font-size: 40px;}
 }
 .address h3 a{
