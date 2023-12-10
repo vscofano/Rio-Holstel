@@ -40,8 +40,32 @@
             background-size: cover; /* Preenche todo o elemento */
             background-position: center; /* Centraliza a imagem */
             background-attachment: fixed;/* Fixa o plano de fundo */
-            
         }
+		#home {
+            height: 100vh;
+            background-size: cover;
+            background-position: center center;
+            transition: background 0.6s ease-in-out;
+			position: relative;
+            overflow: hidden;
+        }
+		@media only screen and (max-width:768px){
+			#home{
+				height: 70vh;
+			}
+		}
+		.background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-size: cover;
+            background-position: center center;
+            transition: opacity 0.6s ease-in-out;
+        }
+
     </style>		
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,7 +118,11 @@
 
 <!--###################################################################################################################################################################################### -->
 		<!-- START HOME -->
-		<section data-stellar-background-ratio="0.3" id="home" class="home_parallax ripple" style="background-image: url(assets/img/bg/bg.jpg);  background-size:cover; background-position: center center;">
+		<section id="home">
+			<div class="background-image" style="background-image: url('assets/img/bg/bg.jpg');"></div>
+			<div class="background-image" style="background-image: url('assets/img/bg/forest-2.jpg');"></div>
+			<div class="background-image" style="background-image: url('assets/img/bg/vista.jpg');"></div>
+		
 				
 			<div class="container">
 				<div class="row">
@@ -259,7 +287,7 @@
 						<div class="address">
 							<i id="rodape_i" style="font-size: 30px; color: white; margin-bottom: 25px; margin-top: -3px;" class="fa fa-instagram" aria-hidden="true"></i><i id="rodape_i" style="margin-left: 15px; font-size: 30px; color: white;" class="fa fa-facebook" aria-hidden="true"></i> 
 							<h2 style="font-size: 20px; margin-bottom: 30px;">Joaquim Murtinho, 517 - Santa Teresa, Rio de Janeiro - RJ, 20241-320</h2>
-							<a style="" href="contato.html"><button class="endereco">COMO CHEGAR</button></a>
+							<a href="contato.html"><button class="endereco">COMO CHEGAR</button></a>
 						</div>
 						
 					</div><!-- END COL  -->
@@ -312,6 +340,40 @@
 			<script src="assets/js/form-contact.js"></script>			
 		<!-- scripts js -->
 			<script src="assets/js/scripts.js"></script>
+
+			<script>
+				const imagensDeFundo = [
+					'imagem1.jpg',
+					'imagem2.jpg',
+					'imagem3.jpg',
+				];
+		
+				let indiceAtual = 0;
+				const secao = document.getElementById('home');
+				const backgroundImages = document.querySelectorAll('.background-image');
+		
+				function trocarImagemDeFundo() {
+					// Oculta todas as imagens de fundo
+					backgroundImages.forEach(image => {
+						image.style.opacity = 0;
+					});
+		
+					// Atualiza a imagem de fundo da seção principal
+					secao.style.backgroundImage = `url(${imagensDeFundo[indiceAtual]})`;
+		
+					// Exibe a próxima imagem de fundo com transição suave
+					backgroundImages[indiceAtual].style.opacity = 1;
+		
+					// Atualiza o índice para a próxima imagem
+					indiceAtual = (indiceAtual + 1) % imagensDeFundo.length;
+		
+					// Chama a função novamente após 5 segundos
+					setTimeout(trocarImagemDeFundo, 5000);
+				}
+		
+				// Inicia o carrossel
+				trocarImagemDeFundo();
+			</script>
     </body>
 
 <!-- Mirrored from bestwpware.com/html/tm/orange-demo/orange/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 20:38:19 GMT -->

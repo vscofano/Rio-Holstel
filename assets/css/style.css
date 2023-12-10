@@ -55,7 +55,7 @@ h4.titulo_privativo{
     color: #04620b;
     text-transform: uppercase;
     font-weight: bolder;
-    font-size: 40px;
+    font-size: 22px;
 }
 a {
 text-decoration: none;
@@ -606,7 +606,7 @@ video { min-width: 100%;height: 100%;}
 }
 .next_page:hover{
     background-color: #04620b;
-   border-color: #04620b;
+    border-color: #04620b;
 }
 /*end buttao das divs*/
 
@@ -655,6 +655,7 @@ width: 100px;
     bottom: 0;
     left: 0;
     transition: all 0.5s ease 0s;
+    
 }
 
 .serviceBox .service-icon{
@@ -676,7 +677,6 @@ transition: all 0.5s ease 0s;
 }
 .serviceBox .service-no{
     display: inline-block;
-    float: right;
     font-size: 32px;
     color: #ddd;
     line-height: 20px;
@@ -1070,6 +1070,9 @@ width: 600px;}
 .single_project{
         padding-top: 53px;
 }
+.about_project_details{
+    text-align: center;
+}
 
 .media-left{
     margin-bottom: 40px;
@@ -1079,15 +1082,13 @@ width: 600px;}
     text-align: center;
     margin-bottom: 30px;
 }
-.about_project_details li{
-    margin-left: 23px;
-}
 
 .box_page_2{
     margin-left: 22px;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 15px;
     margin-bottom: -17px;
+    padding-left: 10px;
 }
     .gallery_info{
     position: absolute;
@@ -1131,7 +1132,9 @@ table{
 .about_project p {
 	margin-bottom: 30px;
 }
-.about_project_details { margin-bottom: 20px }
+.about_project_details { 
+    margin-bottom: 20px;
+}
 .about_project_details ul {
     margin: 0;
     padding: 0;
@@ -1237,10 +1240,27 @@ border: 1px solid darkgreen;
     visibility: hidden;
     transition: all 0.5s ease 0s;
 }
-.box:hover:after{
+.box:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Cor de fundo (pode ser ajustada conforme necessário) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateX(0deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out 0.3s; /* Adiciona um atraso de 0.3s para background-color */
+}
+
+.box:hover:after {
     transform: rotateX(0deg);
     visibility: visible;
     opacity: 1;
+    background-color: darkgreen;
+   
 }
 .box img{
     width: 100%;
@@ -1255,12 +1275,14 @@ border: 1px solid darkgreen;
     opacity: 0;
     z-index: 1;
     transform: translate(0%, 0%);
-    transition: all 0.5s ease 0s;
+
 }
 .box:hover .box-content{
     opacity: 1;
     top: 50%;
     transform: translate(0%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+    
 }
 .box .title{
 color: #fff;
@@ -1697,7 +1719,8 @@ width: 100%;
 }
 .address{
 background: #21632beb none repeat scroll 0 0;
-padding: 50px;
+padding: 20px;
+margin-top: -25px;
 
 }
 #rodape_i:hover{
